@@ -3,12 +3,12 @@
 #from repo import update, delete_employee
 import repo
 
-employee =('abc', 21, 40000, True)
+employee =('abcd', 21, 40000, True)
 repo.create_employee(employee)
 print(f'Employee {employee[1]} created successfully')
 print('After add:', repo.read_all_employee())
 
-employee =('xyz', 22, 50000, True)
+employee =('yogi', 22, 50000, True)
 repo.create_employee(employee)
 print(f'Employee {employee[1]} created successfully')
 print('After add:', repo.read_all_employee())

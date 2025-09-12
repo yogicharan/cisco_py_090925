@@ -1,15 +1,15 @@
 employees = []
 
-employee =('abc', 21, 40000, True)
+employee =('yogi', 21, 40000, True)
 employees.append(employee)
 
-employee =('xyz', 22, 50000, True)
+employee =('chran', 22, 50000, True)
 employees.append(employee)
 
 print(employees)
 
 i = 0
-search = 'abc'
+search = 'yogi'
 index = -1
 for emp in employees:
     if emp[0] == search:
@@ -27,7 +27,7 @@ else:
     employees[index] = employee
 print('after search and update')
 
-employee =('def', 21, 40000, True)
+employee =('ravi', 21, 40000, True)
 employees.append(employee)
 print(employees)
 employees.pop() 

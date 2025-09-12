@@ -1,2 +1,2 @@
-List: ['I', 'am', 'Stuti', 'Sharma']
-Tuple: ('I', 'am', 'Stuti', 'Sharma')
+List: ['i', 'am', 'yogi']
+Tuple: ('i', 'am', 'yogi')
