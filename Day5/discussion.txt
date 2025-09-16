@@ -1,0 +1,22 @@
+APIs of Employee Management 
+-----------------------------------------------------------------------------------
+http
+method      url             py fun
+-----------------------------------------------------------------------------------
+POST        /employees      def create()
+    REQ: {"id":101,"name":"Dravid","age":50,"salary":1200,"is_active":true}
+    RES: OK 200 json {"id":101,"name":"Dravid","age":50,"salary":1200,"is_active":true}
+
+GET         /employees      def read_all()
+    RES: OK 200 json [{"id":101,"name":"Dravid","age":50,"salary":1200,"is_active":true}]
+    
+GET         /employees/101  def read_by_id(app_id)
+    RES: OK 200 json {"id":101,"name":"Dravid","age":50,"salary":1200,"is_active":true}
+
+PUT         /employees/101  def update(app_id)
+    REQ: {"salary":2200}
+    RES: OK 200 json {"id":101,"name":"Dravid","age":50,"salary":2200,"is_active":true}
+    
+DELETE      /employees/101  def delete_employee(app_id)
+    RES: OK 200 json {"message" : "Deleted Successfully"}
+-----------------------------------------------------------------------------------
