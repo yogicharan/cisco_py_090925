@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify 
+from datetime import datetime
 import app.crud as crud 
 from app.config import config 
+import app.mail as mail
 
 application = Flask(__name__)
 
@@ -20,7 +22,28 @@ def create():
     crud.create_employee(employee_dict)
     emp_id = employee_dict['id']
     savedEmployee_dict = crud.read_by_id(emp_id)
-    # send the mail
+
+     # send the mail     
+    now = datetime.now()
+    date_time_str = now.strftime("%Y-%m-%d %H:%M:%S")
+
+    emp_id = employee_dict["id"]
+    name = employee_dict["name"]
+    age  = employee_dict["age"]
+    salary  = employee_dict["salary"]
+    is_active_str  = 'Yes' if employee_dict["is_active"] else 'No' 
+
+    subject = f'{date_time_str} Employee {name} Created.'
+    mail_body = f'''Employee created successfully.
+id : {emp_id}
+name : {name}
+age : {age}
+salary : {salary}
+is_active : {is_active_str}
+    '''
+    result = mail.send_gmail(mail.to_address, subject, mail_body)
+    print(f'mail sent?{result}')
+    # end send the mail
     return jsonify(savedEmployee_dict)
 
 @application.route("/employees", methods = ['GET'])
