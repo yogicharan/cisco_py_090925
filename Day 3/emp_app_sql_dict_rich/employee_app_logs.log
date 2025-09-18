@@ -1,0 +1,60 @@
+2025-09-15 10:46:44,261 [INFO] BEGIN (implicit)
+2025-09-15 10:46:44,268 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-15 10:46:44,271 [INFO] [generated in 0.00349s] ()
+2025-09-15 10:46:44,274 [INFO] read all employees.
+2025-09-15 10:47:04,472 [INFO] INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)
+2025-09-15 10:47:04,473 [INFO] [generated in 0.00127s] (101, 'Dravid', 50, 1200.0, 1)
+2025-09-15 10:47:04,479 [INFO] COMMIT
+2025-09-15 10:47:04,495 [INFO] employee created.
+2025-09-15 10:47:07,875 [INFO] BEGIN (implicit)
+2025-09-15 10:47:07,876 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-15 10:47:07,877 [INFO] [cached since 23.61s ago] ()
+2025-09-15 10:47:07,879 [INFO] read all employees.
+2025-09-15 10:47:13,158 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-15 10:47:13,159 [INFO] [generated in 0.00129s] (101, 1, 0)
+2025-09-15 10:47:13,165 [INFO] read employee model.
+2025-09-15 10:47:13,165 [INFO] read employee for given id.
+2025-09-15 10:47:20,611 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-15 10:47:20,613 [INFO] [cached since 7.455s ago] (101, 1, 0)
+2025-09-15 10:47:20,615 [INFO] read employee model.
+2025-09-15 10:47:20,616 [INFO] read employee for given id.
+2025-09-15 10:47:22,955 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-15 10:47:22,956 [INFO] [cached since 9.798s ago] (101, 1, 0)
+2025-09-15 10:47:22,956 [INFO] read employee model.
+2025-09-15 10:47:22,959 [INFO] UPDATE employees SET salary=? WHERE employees.id = ?
+2025-09-15 10:47:22,960 [INFO] [generated in 0.00097s] (2200.0, 101)
+2025-09-15 10:47:22,967 [INFO] COMMIT
+2025-09-15 10:47:22,972 [INFO] employee salary updated.
+2025-09-15 10:47:24,822 [INFO] BEGIN (implicit)
+2025-09-15 10:47:24,889 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-15 10:47:24,934 [INFO] [cached since 40.67s ago] ()
+2025-09-15 10:47:24,961 [INFO] read all employees.
+2025-09-15 10:47:28,600 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-15 10:47:28,602 [INFO] [cached since 15.44s ago] (101, 1, 0)
+2025-09-15 10:47:28,606 [INFO] read employee model.
+2025-09-15 10:47:28,606 [INFO] read employee for given id.
+2025-09-15 10:47:28,609 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-15 10:47:28,630 [INFO] [cached since 15.47s ago] (101, 1, 0)
+2025-09-15 10:47:28,651 [INFO] read employee model.
+2025-09-15 10:47:28,665 [INFO] DELETE FROM employees WHERE employees.id = ?
+2025-09-15 10:47:28,666 [INFO] [generated in 0.00173s] (101,)
+2025-09-15 10:47:28,672 [INFO] COMMIT
+2025-09-15 10:47:28,683 [INFO] employee deleted.
